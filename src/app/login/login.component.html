@@ -1,0 +1,28 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Log in</mat-card-title>
+      </mat-card-header>
+  
+      <form [formGroup]="form" class="example-form" (ngSubmit)="onSubmit()">
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Username" type="text" formControlName="username" id="username"/>
+            <mat-error>User Name is required</mat-error>
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Password" type="password" formControlName="password" id="password" />
+            <mat-error>Password is required</mat-error>
+          </mat-form-field>
+        </mat-card-content>
+        <button [disabled]="loading" class="btn btn-primary">
+          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+          Login
+      </button>
+      </form>
+    </mat-card>
+  
+  </div>
+

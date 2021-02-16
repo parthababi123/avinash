@@ -1,0 +1,26 @@
+<mat-toolbar color="red">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    
+    <span class="menu-spacer"></span>
+    <h1>Hi {{user.firstName}}!</h1>
+    <div *ngIf="user"> 
+      <a mat-button [routerLink]="'/home'"> Home </a>
+      <a mat-button [routerLink]="'/users'">  Manage Users</a>
+      <a mat-button [routerLink]="'/contacts'"> Clients </a>
+      <a mat-button [routerLink]="'/create-contact'"> Projects </a>
+      <a mat-button [routerLink]="'/register'"> Register</a>
+      <a mat-button (click)="logout()">Logout</a>
+      
+        
+      
+    </div>
+   
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+      <span style="font-size: 12px;"></span>
+    </mat-toolbar-row>
+</mat-toolbar>
